@@ -32,6 +32,11 @@ export default {
       required: false,
       default: true,
     },
+    showHours: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     labels: {
       type: Object,
       required: false,
@@ -66,7 +71,7 @@ export default {
           previous: 0,
           label: this.labels.hours,
           elementId: 'flip-card-hours-' + uuid,
-          show: true,
+          show: this.showHours,
         },
         {
           current: 0,
